@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"   
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="XamarinFormsSamplesMix.PopupPage">
+
+    <Grid Margin="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="True"
+              x:Name="SuccessGrid">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <lottie:AnimationView x:Name="AnimationView" Animation="success_state.json"
+                                  Loop="False" AutoPlay="True" Grid.Row="1" OnFinish="AnimationView_Finish"
+                                  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+
+        </Grid>
+    </Grid>
+          
+</pages:PopupPage>

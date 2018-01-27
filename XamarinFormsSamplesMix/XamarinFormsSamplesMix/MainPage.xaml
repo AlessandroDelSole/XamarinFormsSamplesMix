@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinFormsSamplesMix"
+             xmlns:segmented="clr-namespace:Plugin.Segmented.Control;assembly=Plugin.Segmented"              
+             x:Class="XamarinFormsSamplesMix.MainPage"
+             Padding="0,20,0,0">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <segmented:SegmentedControl x:Name="SegmentedControl" Grid.Column="1"
+                                              TintColor="Blue" 
+                                              SelectedTextColor="White" 
+                                              DisabledColor="Gray" OnSegmentSelected="SegmentedControl_SegmentSelected"
+                                              Margin="8,8,8,8">
+                <segmented:SegmentedControl.Children>
+                    <segmented:SegmentedControlOption Text="First content" />
+                    <segmented:SegmentedControlOption Text="Second content" />
+                </segmented:SegmentedControl.Children>
+            </segmented:SegmentedControl>
+        </Grid>
+
+
+        <Grid Grid.Row="1" x:Name="FirstGrid" BackgroundColor="LightBlue">
+            <Button Text="View popup" x:Name="ViewPopupButton" HorizontalOptions="Center" Clicked="ViewPopupButton_Clicked"/>
+        </Grid>
+
+        <Grid Grid.Row="1" x:Name="SecondGrid" BackgroundColor="LightSalmon" IsVisible="False">
+
+        </Grid>
+    </Grid>
+
+</ContentPage>
